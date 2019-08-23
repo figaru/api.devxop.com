@@ -8,3 +8,12 @@ DisplayController = RouteController.extend({
 		];
 	} */
 });
+
+
+Router.route("/", {
+    name: "home",
+	layoutTemplate: 'displayBase',
+	action: function () {
+        this.render("landing");
+    }
+});

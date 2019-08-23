@@ -75,6 +75,7 @@ OAuth.route('/oauth/authorize', { where: 'server' }).post(function () {
     var device = Devices.findOne({ device_id: params.device_id, authorization_code: params.authorization_code });
     if (device) {
         let user = Accounts.findUserByEmail(params.user);
+        console.log(user);
         let result = Accounts._checkPassword(user, params.pass);
 
         if (result["error"]) {
