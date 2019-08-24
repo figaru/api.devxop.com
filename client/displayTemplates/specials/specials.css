@@ -6,8 +6,10 @@
 	right: 0;
 	bottom: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
   background: #000;
 }
 
