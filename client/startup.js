@@ -1,7 +1,4 @@
 import Materialize from 'materialize-css';
-<<<<<<< HEAD
-global.M = global.Materialize = Materialize;
-=======
 global.M = global.Materialize = Materialize;
 
 $(function() {
@@ -18,7 +15,7 @@ $(function() {
         }else{
             
         }
-    }, 5000);
+    }, 30000);
 });
 
 
@@ -35,4 +32,3 @@ function ping(device){
        }
     }); */
  }
->>>>>>> parent of dd0a01d... interval updated ping
