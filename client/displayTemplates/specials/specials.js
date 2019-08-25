@@ -2,8 +2,8 @@ Template.displaySpecials.onRendered(function () {
     $(document).ready(function () {
         $('.slider').slider({
             indicators: false,
-            duration: 1000,
-            interval: 8000,
+            duration: 400,
+            interval: 6000,
         });
     });
 
