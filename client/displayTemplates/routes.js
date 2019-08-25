@@ -8,7 +8,6 @@ Router.route('/display', {
 	waitOn: function () {
 		let query = this.params.query;
 		let deviceId = query.deviceId;
-		
 
 		return [
 			Meteor.subscribe('devicesSubscriptionsPublic', deviceId),
@@ -23,7 +22,7 @@ Router.route('/display', {
 		let deviceId = query.deviceId;
 		let accessToken = query.accessToken;
 
-		let device = Devices.findOne({"device_id": deviceId, "auth.access_token": accessToken });
+		let device = Devices.findOne({ "device_id": deviceId, "auth.access_token": accessToken });
 		if (!device) {
 			setTimeout(function(){
 				window.location.reload(true);

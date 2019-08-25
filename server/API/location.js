@@ -1,4 +1,4 @@
-/* Router.route('/ping', { where: 'server' }).get(function () {
+Router.route('/ping', { where: 'server' }).get(function () {
     let req = this.request,
         res = this.response,
         params = getParams(req),
@@ -16,4 +16,4 @@
     }
     
     resp(res, 200, "OK")
-}); */
+});

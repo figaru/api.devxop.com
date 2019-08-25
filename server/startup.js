@@ -19,7 +19,7 @@ Meteor.startup(() => {
 	//#######################
 	//	DATABASE CONNECTION
 	//#######################
-	var db_connection =  new DBConnection("mongodb://localhost:3001/meteor");
+	var db_connection =  new DBConnection("mongodb://localhost:27017/meteor");
 	var remoteDB = db_connection.initConnection();
 	
 	if(db_connection.connected()){
