@@ -10,6 +10,11 @@ var constraints = {
     }
 };
 
+var errBack = function (error) {
+    // alert("Video capture error: ", error.code);
+    console.log(error);
+};
+
 Template.displayBase.onRendered(function () {
 
     video = document.getElementById('video');
@@ -21,13 +26,22 @@ Template.displayBase.onRendered(function () {
     // Load init
     init();
 
+    // Ask the browser for permission to use the Webcam
+    if (navigator.getUserMedia) {                    // Standard
+        navigator.getUserMedia(constraints, init, errBack);
+    } else if (navigator.webkitGetUserMedia) {        // WebKit
+        navigator.webkitGetUserMedia(constraints, init, errBack);
+    } else if (navigator.mozGetUserMedia) {        // Firefox
+        navigator.mozGetUserMedia(constraints, init, errBack);
+    };
+
     // Draw image
 });
 
 // Access webcam
 async function init() {
     try {
-        
+
         /* handleSuccess(stream);
 
         setTimeout(function(){
@@ -55,7 +69,7 @@ async function init() {
                     screenshot: canvas.toDataURL(),
                 }
 
-                Meteor.call("devices.edit", devId, data, function(){
+                Meteor.call("devices.edit", devId, data, function () {
                     console.log("save screen shot");
                     stream.getTracks().forEach(track => track.stop())
                 });
@@ -68,7 +82,7 @@ async function init() {
 
 
     } catch (e) {
-        errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+        console.log(e);
     } finally {
 
     }
