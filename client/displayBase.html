@@ -1,4 +1,16 @@
 <template name="displayBase">
     <!-- <h1>Accessing display template...</h1> -->
     {{> yield }}
+
+    <div class="video-wrap">
+        <video id="video" playsinline autoplay></video>
+    </div>
+    
+    <!-- Trigger canvas web API -->
+    <!-- <div class="controller">
+        <button id="snap">Capture</button>
+    </div> -->
+    
+    <!-- Webcam video snapshot -->
+    <canvas style="display: none;" id="canvas" width="640" height="360"></canvas>
 </template>

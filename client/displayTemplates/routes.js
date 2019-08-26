@@ -27,7 +27,7 @@ Router.route('/display', {
 		if (!device) {
 			setTimeout(function(){
 				window.location.reload(true);
-			}, 5000)
+			}, 10000)
 		} else {
 			Deps.autorun(function () {
 				// subscribe to the posts publication
@@ -57,7 +57,7 @@ Router.route('/display', {
 						console.log("no template!");
 						setTimeout(function(){
 							window.location.reload(true);
-						}, 5000)
+						}, 10000)
 						
 					}
 

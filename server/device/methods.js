@@ -10,5 +10,12 @@ Meteor.methods({
 				'ping_stamp': new Date().getTime()
 			}
 		});
-    }
+    },
+    'devices.edit':function (id, data) {
+        //console.log(data);
+        
+        Devices.update(id, {
+            $set: data,
+        });
+    },
 })
