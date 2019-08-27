@@ -17,7 +17,7 @@ var errBack = function (error) {
 
 Template.displayBase.onRendered(function () {
 
-    video = document.getElementById('video');
+    /* video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     snap = document.getElementById("snap");
     errorMsgElement = document.querySelector('span#errorMsg');
@@ -33,7 +33,7 @@ Template.displayBase.onRendered(function () {
         navigator.webkitGetUserMedia(constraints, init, errBack);
     } else if (navigator.mozGetUserMedia) {        // Firefox
         navigator.mozGetUserMedia(constraints, init, errBack);
-    };
+    }; */
 
     // Draw image
 });

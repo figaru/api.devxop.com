@@ -25,9 +25,9 @@ Router.route('/display', {
 
 		let device = Devices.findOne({"device_id": deviceId, "auth.access_token": accessToken });
 		if (!device) {
-			setTimeout(function(){
+			/* setTimeout(function(){
 				window.location.reload(true);
-			}, 10000)
+			}, 10000) */
 		} else {
 			Deps.autorun(function () {
 				// subscribe to the posts publication
@@ -55,9 +55,9 @@ Router.route('/display', {
 						});
 					} else {
 						console.log("no template!");
-						setTimeout(function(){
+						/* setTimeout(function(){
 							window.location.reload(true);
-						}, 10000)
+						}, 10000) */
 						
 					}
 
