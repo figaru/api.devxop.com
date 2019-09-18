@@ -16,7 +16,7 @@ imageUrl = function(id){
         url = img.url();
     }
 
-    return  document.location.origin + url +'?'+new Date().getTime();
+    return  window.location.protocol + "//" + window.location.hostname + url +'?'+new Date().getTime();
 }
 
 Template.registerHelper("thumbUrl", function (id) {
@@ -32,7 +32,7 @@ thumbUrl = function(id){
         url = thumb.url();
     }
 
-    return document.location.origin + url +'?'+new Date().getTime();
+    return window.location.protocol + "//" + window.location.hostname + url +'?'+new Date().getTime();
 }
 
 //**dataURL to blob**
