@@ -14,7 +14,7 @@ Template.displaySpecials.onRendered(function () {
             refreshInit = 2;//set variable so that next update refreshes page
         }else{
             console.log("Refreshing page...");
-            window.location.reload();
+            window.location.reload(true);
         }
 
     });
