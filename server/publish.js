@@ -13,3 +13,11 @@ Meteor.publish('devicesSubscriptionsPublic', function(deviceId){
 Meteor.publish('videos', function(){
 	return Videos.find({});
 });
+
+Meteor.publish('images', function(){
+	return Images.find({});
+});
+
+Meteor.publish('thumbnails', function(){
+	return Thumbnails.find({});
+});

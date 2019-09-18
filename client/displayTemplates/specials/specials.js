@@ -1,23 +1,29 @@
-Template.displaySpecials.onRendered(function () {
-    $(document).ready(function () {
-        $('.slider').slider({
-            indicators: false,
-            duration: 400,
-            interval: 6000,
-        });
-    });
+var oldCount;
 
-    $('.slides').bind("DOMSubtreeModified", function () {
-        console.log("changed! updating slider");
-        setTimeout(function () {
-            $('.slider').slider({
-                indicators: false,
-                duration: 1000,
-                interval: 8000,
-            });
-        }, 2000);
+var items;
+var template;
+var plates;
+var device;
+
+var langInterval;
+var interval;
+
+Template.displaySpecials.onRendered(function () {
+
+    this.sessionWatcher = Session.watch('plates', function (value) {
+        console.log("Session changed -> updating slider.");
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            duration: 0,
+        });
+
+        interval = setInterval(function(){
+            $('.carousel.carousel-slider').carousel("next");
+        }, 8000)
+        
     });
 });
+
 
 Template.displaySpecials.helpers({
     'plates': function () {
