@@ -16,7 +16,7 @@ imageUrl = function(id){
         url = img.url();
     }
 
-    return  window.location.protocol + "//" + window.location.hostname + url +'?'+new Date().getTime();
+    return  "https://devxop.com" + url;
 }
 
 Template.registerHelper("thumbUrl", function (id) {
@@ -32,7 +32,7 @@ thumbUrl = function(id){
         url = thumb.url();
     }
 
-    return window.location.protocol + "//" + window.location.hostname + url +'?'+new Date().getTime();
+    return "https://devxop.com" + url;
 }
 
 //**dataURL to blob**
