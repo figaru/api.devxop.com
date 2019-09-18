@@ -16,9 +16,7 @@ imageUrl = function(id){
         url = img.url();
     }
 
-    console.log("https://devxop.com" + url +'?'+new Date().getTime());
-
-    return  "https://devxop.com" + url +'?'+new Date().getTime();
+    return  document.location.origin + url +'?'+new Date().getTime();
 }
 
 Template.registerHelper("thumbUrl", function (id) {
@@ -34,9 +32,7 @@ thumbUrl = function(id){
         url = thumb.url();
     }
 
-    console.log("https://devxop.com" + url +'?'+new Date().getTime());
-
-    return "https://devxop.com" + url +'?'+new Date().getTime();
+    return document.location.origin + url +'?'+new Date().getTime();
 }
 
 //**dataURL to blob**
