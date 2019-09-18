@@ -12,6 +12,8 @@ Router.route('/display', {
 
 		return [
 			Meteor.subscribe('devicesSubscriptionsPublic', deviceId),
+			Meteor.subscribe('images'),
+			Meteor.subscribe('thumbnails')
 		]
 	},
 	action: function () {
