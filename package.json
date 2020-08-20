@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.5",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "materialize-css": "^1.0.0-rc.2",
     "meteor-node-stubs": "^0.3.2",
     "simpl-schema": "^1.5.5"
